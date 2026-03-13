@@ -33,7 +33,7 @@
   (rate s0 s1 t0 t1))
 
 (defn acceleration
-  "Calculates acceleration
+  "Calculates acceleration.
   Formula: a = Δv / Δt"
   [v0 v1 t0 t1]
   (rate v0 v1 t0 t1))
@@ -44,3 +44,34 @@
   [s0 v t]
   (verify-nums [s0 v t])
   (+ s0 (* v t)))
+
+(defn time
+  "Calculates time in uniform motion.
+  Formula: t = d / v"
+  [d v]
+  (verify-nums [d v])
+  (/ d v))
+
+(defn velocity-uam 
+  "Calculates velocity in uniformly accelerated motion.
+   Formula: v = v0 + a*t"
+  [v0 a t]
+  (verify-nums [v0 a t])
+  (+ v0 (* a t)))
+
+(defn torricelli-velocity-squared
+  "Calculates the square of the final velocity using Torricelli's equation.
+  Formula: v² = v0² + 2aΔs"
+  [v0 a s0 s1]
+  (verify-nums [v0 a s0 s1])
+  (+ (* v0 v0)
+     (* 2 a (delta s0 s1))))
+
+(defn position-uam
+  "Calculates position in uniformly accelerated motion.
+   Formula: s = s0 + v0 * t + ½ * a * t²"
+  [s0 v0 t a]
+  (verify-nums [s0 v0 t a])
+  (+ s0 
+     (* v0 t) 
+     (* 0.5 a t t)))
