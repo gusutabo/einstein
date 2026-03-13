@@ -1,4 +1,4 @@
-(ns physics)
+(ns einstein.kinematics)
 
 (defn verify-nums 
   "Validates that all elements in xs are present and numeric.

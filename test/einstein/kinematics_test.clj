@@ -1,6 +1,6 @@
-(ns physics-test
+(ns einstein.kinematics-test
   (:require [clojure.test :refer :all]
-            [physics :refer :all]))
+            [einstein.kinematics :refer :all]))
 
 (deftest delta-test
   (is (= 10 (delta 0 10)))
