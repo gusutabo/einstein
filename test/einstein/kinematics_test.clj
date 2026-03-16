@@ -30,7 +30,7 @@
     (is (= 40 (torricelli-velocity-squared 0 2 0 10))))
 
   (testing "Position in uniformly accelerated motion"
-    (is (= 24 (position-uam 0 10 2 2)))))
+    (is (= 24.0 (position-uam 0 10 2 2)))))
 
 (deftest validation-errors
   (testing "Average velocity missing argument"
